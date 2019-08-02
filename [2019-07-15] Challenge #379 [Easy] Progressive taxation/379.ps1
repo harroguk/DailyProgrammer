@@ -1,9 +1,5 @@
 #Start at 13:30
-function tax{
-    param(
-        [int]$income
-    )
-
+function tax($income){
     if($income -le 10000){
     }elseif($income -gt 10000 -AND $income -le 30000){
 	    $tax = ($income - 10000) * 0.1 
@@ -12,9 +8,7 @@ function tax{
     }elseif($income -gt 100000){
         $tax = (($income - 100000) * 0.4) + 19500
     }
-
-    $tax = [math]::floor($tax)
-    return $tax
+    return [math]::floor($tax)
 }
 
 tax(0)

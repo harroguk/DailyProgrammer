@@ -10,6 +10,7 @@ def tax(income):
         tax = ((income - 100000) * 0.4) + 19500
     return int(tax)
 
+
 tax(0)
 tax(10000)
 tax(10009)
